@@ -128,8 +128,27 @@ class Program
                     break;
 
 
-
                 case "7":
+                    //Code to search by department
+                    Console.WriteLine("Enter department to search");
+                    string departmentToSearch = Console.ReadLine();
+                    var departmentSearchResults = service.SearchByDepartment(departmentToSearch);
+                    if(departmentSearchResults.Count > 0)
+                    {
+                        foreach (var student in departmentSearchResults)
+                        {
+                            Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Age: {student.Age}, Department: {student.Department}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No students found in that department.");
+                    }
+                    break;
+
+
+
+                case "8":
                     // Exit the program
                     Console.WriteLine("Exiting program...");
                     Environment.Exit(0);

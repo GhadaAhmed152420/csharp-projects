@@ -10,7 +10,9 @@
             Console.WriteLine("3. View Student by ID");
             Console.WriteLine("4. Update Student");
             Console.WriteLine("5. Delete Student");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("6. Search By Name");
+            Console.WriteLine("7. Search By Department");
+            Console.WriteLine("8. Exit");
         }
     }
 }

@@ -50,4 +50,10 @@ public class StudentService
         return result.ToList();
 
     }
+
+    public List<Student> SearchByDepartment(string department)
+    {
+        var result = students.Where(s => s.Department.Contains(department));
+        return result.ToList();
+    }
 }
