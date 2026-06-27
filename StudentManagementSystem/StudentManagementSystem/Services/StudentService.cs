@@ -56,4 +56,10 @@ public class StudentService
         var result = students.Where(s => s.Department.Contains(department));
         return result.ToList();
     }
+
+    public List<Student> SortStudentsByName()
+    {
+        var result = students.OrderBy(s => s.Name);
+        return result.ToList();
+    }
 }

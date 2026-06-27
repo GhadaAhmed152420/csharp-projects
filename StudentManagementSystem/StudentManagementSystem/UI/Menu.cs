@@ -12,7 +12,8 @@
             Console.WriteLine("5. Delete Student");
             Console.WriteLine("6. Search By Name");
             Console.WriteLine("7. Search By Department");
-            Console.WriteLine("8. Exit");
+            Console.WriteLine("8. Sort Students By Name");
+            Console.WriteLine("9. Exit");
         }
     }
 }

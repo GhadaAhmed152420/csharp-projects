@@ -130,7 +130,7 @@ class Program
 
                 case "7":
                     //Code to search by department
-                    Console.WriteLine("Enter department to search");
+                    Console.Write("Enter department to search");
                     string departmentToSearch = Console.ReadLine();
                     var departmentSearchResults = service.SearchByDepartment(departmentToSearch);
                     if(departmentSearchResults.Count > 0)
@@ -149,6 +149,17 @@ class Program
 
 
                 case "8":
+                    // Code to sort students by name
+                    var sortedStudents = service.SortStudentsByName();
+                    foreach (var student in sortedStudents)
+                    {
+                        Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Age: {student.Age}, Department: {student.Department}");
+                    }
+                    break;
+
+
+
+                case "9":
                     // Exit the program
                     Console.WriteLine("Exiting program...");
                     Environment.Exit(0);
