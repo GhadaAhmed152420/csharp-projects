@@ -1,4 +1,6 @@
-﻿public class StudentService
+﻿using System.Reflection.Metadata.Ecma335;
+
+public class StudentService
 {
     private List<Student> students = new List<Student>();
 
@@ -40,5 +42,12 @@
         {
             Console.WriteLine("Student not found.");
         }
+    }
+
+    public List<Student> SearchByName(string name) { 
+
+        var result = students.Where(s => s.Name.Contains(name));
+        return result.ToList();
+
     }
 }

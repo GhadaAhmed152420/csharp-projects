@@ -110,6 +110,26 @@ class Program
 
 
                 case "6":
+                    // Code to search student by name
+                    Console.Write("Enter name to search: ");
+                    string nameToSearch = Console.ReadLine();
+                    var searchResults = service.SearchByName(nameToSearch);
+                    if (searchResults.Count > 0)
+                    {
+                        foreach (var student in searchResults)
+                        {
+                            Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Age: {student.Age}, Department: {student.Department}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No students found with that name.");
+                    }
+                    break;
+
+
+
+                case "7":
                     // Exit the program
                     Console.WriteLine("Exiting program...");
                     Environment.Exit(0);
