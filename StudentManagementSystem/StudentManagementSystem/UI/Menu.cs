@@ -13,7 +13,8 @@
             Console.WriteLine("6. Search By Name");
             Console.WriteLine("7. Search By Department");
             Console.WriteLine("8. Sort Students By Name");
-            Console.WriteLine("9. Exit");
+            Console.WriteLine("9. Sort Students By Age");
+            Console.WriteLine("10. Exit");
         }
     }
 }

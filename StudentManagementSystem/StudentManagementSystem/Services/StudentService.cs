@@ -62,4 +62,10 @@ public class StudentService
         var result = students.OrderBy(s => s.Name);
         return result.ToList();
     }
+
+    public List<Student> SortStudentsByAge()
+    {
+        var result = students.OrderBy(s => s.Age);
+        return result.ToList();
+    }
 }

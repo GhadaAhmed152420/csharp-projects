@@ -133,7 +133,7 @@ class Program
                     Console.Write("Enter department to search");
                     string departmentToSearch = Console.ReadLine();
                     var departmentSearchResults = service.SearchByDepartment(departmentToSearch);
-                    if(departmentSearchResults.Count > 0)
+                    if (departmentSearchResults.Count > 0)
                     {
                         foreach (var student in departmentSearchResults)
                         {
@@ -158,8 +158,18 @@ class Program
                     break;
 
 
-
                 case "9":
+                    // Code to sort students by age
+                    var sortedByAgeStudents = service.SortStudentsByAge();
+                    foreach (var student in sortedByAgeStudents)
+                    {
+                        Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Age: {student.Age}, Department: {student.Department}");
+                    }
+                    break;
+
+
+
+                case "10":
                     // Exit the program
                     Console.WriteLine("Exiting program...");
                     Environment.Exit(0);
